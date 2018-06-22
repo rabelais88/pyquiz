@@ -15,14 +15,14 @@ def openjson(jsonfile):
 
 
 def quiz(_data):
-  print('방번호 퀴즈\n그만 둘 때에는 Ctrl+Z를 누르세요.\n...이 나오면 아무키나 누르세요.')
+  print('방번호 퀴즈\n그만 둘 때에는 Ctrl+C 또는 Ctrl+Z를 누르세요.\n...이 나오면 아무키나 누르세요.')
   _annex = input('별관을 맞추시겠어요?(Y/N)')
   _annex = _annex.lower()
   _finishsearch = False
   if _annex != 'y' and _annex != 'n':
     print('잘못된 입력입니다. 별관을 맞추지 않는 것으로 합니다')
     _finishsearch = True
-  else if _annex == 'n':
+  elif _annex == 'n':
     _finishsearch = True
   
   # loop until it matches the correct room number
