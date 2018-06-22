@@ -21,8 +21,11 @@ def quiz(_data):
   _finishsearch = False
   if _annex != 'y' and _annex != 'n':
     print('잘못된 입력입니다. 별관을 맞추지 않는 것으로 합니다')
-    _annex = 'n'
     _finishsearch = True
+  else if _annex == 'n':
+    _finishsearch = True
+  
+  # loop until it matches the correct room number
   while True:
     _target = random.randint(0, len(_data))
     while not _finishsearch:
